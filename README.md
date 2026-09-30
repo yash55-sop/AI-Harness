@@ -193,7 +193,7 @@ python -m pip install -e ".[dev,openai]"
 python -m ruff check .
 python -m ruff format --check .
 python -m mypy
-python -m pytest --cov=harness --cov-report=term-missing
+python -m pytest --cov=harness --cov-branch --cov-report=term-missing
 python -m build
 python -m twine check --strict dist/*
 python scripts/verify_wheel.py

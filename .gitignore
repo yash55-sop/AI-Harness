@@ -8,6 +8,7 @@ venv/
 .ruff_cache/
 .mypy_cache/
 .coverage
+.coverage.*
 htmlcov/
 coverage.xml
 build/

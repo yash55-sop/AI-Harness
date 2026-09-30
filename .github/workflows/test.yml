@@ -34,7 +34,7 @@ jobs:
       - run: python -m ruff format --check .
       - run: python -m mypy
       - run: python -m mypy --platform linux
-      - run: python -m pytest --cov=harness --cov-report=term-missing
+      - run: python -m pytest --cov=harness --cov-branch --cov-config=pyproject.toml --cov-report=term-missing
       - run: python -m build
       - run: python -m twine check --strict dist/*
       - run: python scripts/verify_wheel.py
